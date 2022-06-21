@@ -36,6 +36,6 @@ pipeline {
     ECR_REPO = '108174090253.dkr.ecr.us-east-1.amazonaws.com/sre-course'
   }
   triggers {
-    pollSCM('*/15 * * * 1-5')
+    pollSCM('*/10 * * * 1-5')
   }
 }
