@@ -69,7 +69,7 @@ class JenkinsfileUnitTest {
             ECR_REPO = 'your-ecr-repo-url'
           }
           stages {
-            stage('Build and Publish DB') {
+            stage('Build and Publish DB - Success') {
               steps {
                 container(name: 'kaniko') {
                   sh 'echo \'{ "credsStore": "ecr-login" }\' > /kaniko/.docker/config.json'
@@ -110,7 +110,7 @@ class JenkinsfileUnitTest {
             ECR_REPO = 'your-ecr-repo-url'
           }
           stages {
-            stage('Build and Publish DB') {
+            stage('Build and Publish DB - fail') {
               steps {
                 container(name: 'kaniko') {
                   sh 'echo \'{ "credsStore": "ecr-login" }\' > /kaniko/.docker/config.json'
